@@ -1485,6 +1485,22 @@
     json-stringify-safe "^5.0.1"
     lodash "^4.17.21"
 
+"@tryghost/logging@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-1.0.2.tgz#8a8828ee5a22abfeb7a7aca67900b3cd129b37d8"
+  integrity sha512-D/KFMb40dA/1dExe2nbw7m1SFY5B8ghJHPYfLYXAK+Qi4GGO0c9D+3zbWcPoyCfveNW+7Uwgexwg+nAWMH+vmg==
+  dependencies:
+    "@tryghost/bunyan-rotating-filestream" "^0.0.7"
+    "@tryghost/elasticsearch" "^1.0.0"
+    "@tryghost/pretty-stream" "^0.1.2"
+    "@tryghost/root-utils" "^0.3.7"
+    bunyan "^1.8.15"
+    bunyan-loggly "^1.4.2"
+    fs-extra "^10.0.0"
+    gelf-stream "^1.1.1"
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.21"
+
 "@tryghost/magic-link@1.0.14", "@tryghost/magic-link@^1.0.14":
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/@tryghost/magic-link/-/magic-link-1.0.14.tgz#3636a023de4f2ecbd59dff1b56cde029106590f0"
