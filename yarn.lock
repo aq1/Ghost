@@ -1356,6 +1356,13 @@
     "@tryghost/ignition-errors" "^0.1.0"
     lodash "^4.17.21"
 
+"@tryghost/errors@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tryghost/errors/-/errors-1.0.0.tgz#de7ad1a895cbdb48692e877727d8ed830f251285"
+  integrity sha512-w6PEPKGzYDfaNUbjueQ7bp5tyXLTiwa4aEF9tM7xOAhlDFgeHG1xxP5vOfJgEPS20B0ZEHkTGNdh4KJwLEN9yw==
+  dependencies:
+    lodash "^4.17.21"
+
 "@tryghost/express-dynamic-redirects@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@tryghost/express-dynamic-redirects/-/express-dynamic-redirects-0.2.1.tgz#95cdeaedb9022d081acb6e51eee67664621e0f2b"
@@ -1793,7 +1800,18 @@
     remark-footnotes "^1.0.0"
     unist-util-visit "^2.0.0"
 
-"@tryghost/validator@0.1.8", "@tryghost/validator@^0.1.8":
+"@tryghost/validator@0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@tryghost/validator/-/validator-0.1.9.tgz#d86b6a961520e43859117c15547bb3d78bcf5105"
+  integrity sha512-UwUHKtzZ7He1wRgh+Ya30js1f+p6gQu0ak11NwyHzoFxVAjqkRySdV7tGEwj/6t+Qx9iPTv3LuriXEsMNC0Y0g==
+  dependencies:
+    "@tryghost/errors" "^1.0.0"
+    "@tryghost/tpl" "^0.1.8"
+    lodash "^4.17.21"
+    moment-timezone "0.5.23"
+    validator "7.2.0"
+
+"@tryghost/validator@^0.1.8":
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/@tryghost/validator/-/validator-0.1.8.tgz#af746ac120e80b01bf62bc6f65dc693fddd3c879"
   integrity sha512-lbDKA/6Tq1LNaAXeSPU1UpYiVV/Tpsdmj8o6942WA6d13g1m+BiroiD7TVIWG9m6uVUGyTqR8wQwbBHNQAVkhA==
