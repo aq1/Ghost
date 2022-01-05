@@ -98,6 +98,59 @@ describe('{{date}} helper', function () {
         });
     });
 
+    it('creates properly localised date strings with passed locale parameter', function () {
+        const testDates = [
+            '2013-12-31T23:58:58.593+02:00',
+            '2014-01-01T00:28:58.593+11:00',
+            '2014-11-20T01:28:58.593-04:00',
+            '2014-03-01T01:28:58.593+00:00'
+        ];
+
+        const locales = [
+            'de',
+            'ru',
+        ];
+
+        const defaultSiteLocale = 'en';
+
+        const timezone = 'Europe/Dublin';
+        const format = 'll';
+
+        locales.forEach(function (locale) {
+            let rendered;
+
+            const context = {
+                hash: {
+                    locale: locale,
+                },
+                data: {
+                    site: {
+                        // make sure that default site locale is ignored if paramter was passed
+                        locale: defaultSiteLocale,
+                        timezone,
+                    }
+                }
+            };
+
+            testDates.forEach(function (d) {
+                rendered = date.call({published_at: d}, context);
+
+                should.exist(rendered);
+                String(rendered).should.equal(moment(d).tz(timezone).locale(locale).format(format));
+
+                rendered = date.call({}, d, context);
+
+                should.exist(rendered);
+                String(rendered).should.equal(moment(d).tz(timezone).locale(locale).format(format));
+            });
+
+            // No date falls back to now
+            rendered = date.call({}, context);
+            should.exist(rendered);
+            String(rendered).should.equal(moment().tz(timezone).locale(locale).format(format));
+        });
+    });
+
     it('creates properly formatted time ago date strings', function () {
         const testDates = [
             '2013-12-31T23:58:58.593+02:00',
